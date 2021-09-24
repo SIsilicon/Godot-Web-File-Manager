@@ -841,9 +841,9 @@ class FileEntry {
             } else if (option == 4) {
                 for (const entry of mngr.selectedEntries) {
                     fileSystem.download(entry.path, mngr.window, progress => {
-                        dispatchFileEvent('fileprogress', this.path, { progress: progress, type: 'download' });
+                        dispatchFileEvent('fileprogress', entry.path, { progress: progress, type: 'download' });
                     }).finally(() =>
-                        dispatchFileEvent('fileprogress', this.path, { progress: -1.0, type: 'download' })
+                        dispatchFileEvent('fileprogress', entry.path, { progress: -1.0, type: 'download' })
                     );
                 }
             } else if (option == 5 || option == 6) {
@@ -1409,8 +1409,6 @@ class FileManager {
         }
 
         Promise.all(promises).then(() => {
-            console.log(files, folders);
-
             const promises = [];
             const foldersCreated = [];
             for (const file of files) {
