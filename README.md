@@ -27,7 +27,7 @@ The File Explorer comes with the following features.
 ## Limitations
 
 - You cannot edit project folders that are currently open in the editor. That's just the way the editor works.
-- Apart from downloading, there's no sign of progress when doing certaing tasks, so you have to sit and wait, or if you think something's wrong, check the developer console.
+- Apart from downloading, there's no sign of progress when doing certain tasks, so you have to sit and wait, or if you think something's wrong, check the developer console.
 
 ## Final Notes
 
